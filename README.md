@@ -22,11 +22,12 @@ The requirement for preparing the environment of virtual rescue robots are as fo
 - [ROS 2 Foxy Version](https://docs.ros.org/en/foxy/index.html)
 
 ## Installation
-1. Download and Install Ubuntu on your PC
+1. <strong> Download and Install Ubuntu on your PC </strong>
     1. Dowload the [Ubuntu 20.04 LTS Desktop](https://releases.ubuntu.com/20.04/) image.
     2. Install the Ubuntu 20.04 on your PC by the following instruction from [ this link ](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
-2. Install ROS 2 foxy version:
+2. <strong> Install ROS 2 foxy version</strong> 
+    
     Open a terminal console with Ctrl+Alt+T and enter belllow commands one at a time. 
     ```
     sudo apt-get update
@@ -38,7 +39,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     If the above installation fails, please refer to 
     [the official ROS2 Foxy installation guide.](https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Install-Debians/)
 
-3. Install Dependent ROS 2 Packages:
+3. <strong> Install Dependent ROS 2 Packages </strong>
     1. Open the terminal with Ctrl+Alt+T from Remote PC.
     2. Install Gazebo11
     ```
