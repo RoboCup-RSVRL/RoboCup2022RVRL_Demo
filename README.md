@@ -1,6 +1,6 @@
 # RoboCup 2022 Rescue Simulation Virtual Robot League (RSVRL)
 
-This year, the virtual rescue robot league infrastructure will migrate to ROS 2 foxy-version. All sections and packages are undergoing major changes, and we will provide practical examples of each major challenge in the league to better understand the new infrastructure according to the following program:
+This year, the  rescue virtual robot league infrastructure is migrated to ROS 2 foxy-version. All sections and packages are undergoing major changes, and we will provide practical demos of each major challenge in the league to better understand the new infrastructure according to the following program:
 
 
 | Task                    | Goal                         | Progress                                               | 
