@@ -6,7 +6,7 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 | Task                    | Goal                         | Progress                                               | 
 |---                      | ---------------              | ---------------                                        |
 |P3AT Single-Robot Spawn  |Immigration to ROS 2          |   ![100%](https://progress-bar.dev/100?title=completed)|
-|P3AT Multi-Robot Spawn   |Immigration to ROS 2          |   ![85%](https://progress-bar.dev/100?title=progress)  |
+|P3AT Multi-Robot Spawn   |Immigration to ROS 2          |   ![85%](https://progress-bar.dev/85?title=progress)  |
 |2021 Maps                |Import world file to ROS 2    |   ![20%](https://progress-bar.dev/20?title=progress)   |
 |Arial Robots             |Immigration to ROS 2          |   ![1%](https://progress-bar.dev/1?title=progress)     |
 |Wiki                     |Prepapre a e-manual for ROS 2 |   ![20%](https://progress-bar.dev/20?title=progress)   |
