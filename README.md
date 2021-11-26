@@ -30,30 +30,39 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     
     Open a terminal console with Ctrl+Alt+T and enter belllow commands one at a time. 
     ```
-    sudo apt-get update
-    sudo apt-get upgrade
-    wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros2_foxy.sh
-    sudo chmod 755 ./install_ros2_foxy.sh
-    bash ./install_ros2_foxy.sh
+    sudo apt update && sudo apt install curl gnupg2 lsb-release
+    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+    sudo sed -i -e 's/ubuntu .* main/ubuntu focal main/g' /etc/apt/sources.list.d/ros2.list
     ```
     If the above installation fails, please refer to 
     [the official ROS2 Foxy installation guide.](https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Install-Debians/)
 
 3. <strong> Install Dependent ROS 2 Packages </strong>
     1. Open the terminal with Ctrl+Alt+T from Remote PC.
-    2. Install Gazebo11
+    2. Install Base Packages
+    ```
+    sudo apt update
+    sudo apt install ros-foxy-desktop
+    sudo apt install ros-foxy-ros-base
+    ```
+    3. Install Gazebo11
     ```
     sudo apt-get install ros-foxy-gazebo-*
     ```
-    3. Install Cartographer
+    4. Install Cartographer
     ```
     sudo apt install ros-foxy-cartographer
     sudo apt install ros-foxy-cartographer-ros
     ```
-    4. Install Navigation 2
+    5. Install Navigation 2
     ```
     sudo apt install ros-foxy-navigation2
     sudo apt install ros-foxy-nav2-bringup
+    ```
+    6. Set up your environment by sourcing the following file
+    ```
+    source /opt/ros/foxy/setup.bash
     ```
 
 ## Getting Started
