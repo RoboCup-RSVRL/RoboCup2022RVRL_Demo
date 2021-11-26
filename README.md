@@ -8,7 +8,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
 - [ROS 2 Foxy Version](https://docs.ros.org/en/foxy/index.html)
 
 ## Installation
-1. Download and Install on your PC
+1. Download and Install Ubuntu on your PC
     1. Dowload the [Ubuntu 20.04 LTS Desktop](https://releases.ubuntu.com/20.04/) image.
     2. Install the Ubuntu 20.04 on your PC by the following instruction from [ this link ](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
