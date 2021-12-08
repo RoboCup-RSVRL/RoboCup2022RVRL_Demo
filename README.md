@@ -8,7 +8,7 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 |P3AT Single-Robot Spawn  |Immigration to ROS 2          |   ![100%](https://progress-bar.dev/100?title=completed)|
 |P3AT Multi-Robot Spawn   |Immigration to ROS 2          |   ![85%](https://progress-bar.dev/85?title=progress)   |
 |Wiki                     |Prepapre a e-manual for ROS 2 |   ![20%](https://progress-bar.dev/20?title=progress)   |
-|SLAM & Mapping           |Prepapre a Demo for ROS 2     |   ![30%](https://progress-bar.dev/30?title=progress)   |
+|SLAM & Mapping           |Prepapre a Demo for ROS 2     |   ![80%](https://progress-bar.dev/80?title=progress)   |
 |Navigation               |Prepapre a Demo for ROS 2     |   ![1%](https://progress-bar.dev/1?title=progress)     |
 |Exploration              |Prepapre a Demo for ROS 2     |   ![1%](https://progress-bar.dev/1?title=progress)     |
 |Multi-Robot Map          |Prepapre a Demo for ROS 2     |   ![1%](https://progress-bar.dev/1?title=progress)     |
