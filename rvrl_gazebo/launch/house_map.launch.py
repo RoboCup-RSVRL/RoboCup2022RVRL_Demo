@@ -13,19 +13,16 @@ from launch.actions import GroupAction
 from launch_ros.actions import PushRosNamespace
 
 
+def get_robot_dic(type, name, x, y, z, w):
+    return {'type': type, 'name': name, 'x': str(x), 'y': str(y), 'z': str(z), 'w': str(w)}
+
+
 def gen_robot_list():
+    robot1 = get_robot_dic('p3at', 'robot1', 2.0, -1, 0.01, 0)
+    robot2 = get_robot_dic('p3at', 'robot2', 3.0, -1, 0.01, -0.9)
+    robot3 = get_robot_dic('p3at', 'robot3', 4.0, -1, 0.01, 0)
 
-    robots = []
-    robots.append({'type': 'p3at', 'name': 'robot1', 'x': str(
-        2.0), 'y': str(-1), 'z': str(0.01), 'w': str(0)})
-
-    robots.append({'type': 'p3at', 'name': 'robot2', 'x': str(
-        3.0), 'y': str(-1), 'z': str(0.01), 'w': str(0)})
-
-    robots.append({'type': 'p3at', 'name': 'robot3', 'x': str(
-        4.0), 'y': str(-1), 'z': str(0.01), 'w': str(0)})
-
-    return robots
+    return [robot1, robot2, robot3]
 
 
 def generate_launch_description():
@@ -39,9 +36,6 @@ def generate_launch_description():
         'rvrl_gazebo'), 'worlds', world_file_name)
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
-    rvrl_cartographer_path = os.path.join(
-        get_package_share_directory('rvrl_cartographer'), 'launch')
-
     robots = gen_robot_list()
 
     ld = LaunchDescription()
@@ -54,49 +48,24 @@ def generate_launch_description():
     for robot in robots:
         urdf_path = os.path.join(get_package_share_directory(
             'rvrl_description'), 'urdf', robot['type']+'.urdf')
+        ld.add_action(Node(package='robot_spawner_pkg',
+                           executable='spawn_robot',
+                           namespace=robot['name'],
+                           arguments=['robot_' + robot['type'],
+                                      robot['name'],
+                                      robot['name'],
+                                      robot['x'],
+                                      robot['y'],
+                                      robot['z'],
+                                      robot['w']],
 
-        ld.add_action(GroupAction(
-            actions=[PushRosNamespace(robot['name']),
-                     Node(package='robot_spawner_pkg',
-                          executable='spawn_robot',
-                          arguments=['robot_' + robot['type'],
-                                     robot['name'],
-                                     robot['name'],
-                                     robot['x'],
-                                     robot['y'],
-                                     robot['z']],
-                          output='screen'),
-                     Node(package='robot_state_publisher',
-                          executable='robot_state_publisher',
-                          name='robot_state_publisher',
-                          output='screen',
-                          parameters=[{'use_sim_time': use_sim_time}],
-                          arguments=[urdf_path]),
-                    #  Node(package="tf2_ros",
-                    #       name='tf_static_odom_base',
-                    #       executable="static_transform_publisher",
-                    #       arguments=["0", "0", "0", "0", "0", "0",  robot['name']+"/base_link", robot['name']+"/odom"]),
-
-                     ]
-        ))
-
-        # ld.add_action(GroupAction(
-        #     actions=[PushRosNamespace(robot['name']), Node(
-        #         package='robot_state_publisher',
-        #         executable='robot_state_publisher',
-        #         name='robot_state_publisher',
-        #         output='screen',
-        #         parameters=[{'use_sim_time': use_sim_time}],
-        #         arguments=[urdf_path]),
-        #     ]
-        # ))
-
-        # ld.add_action(GroupAction(
-        #     actions=[PushRosNamespace(robot['name']), Node(
-        #         package="tf2_ros",
-        #         executable="static_transform_publisher",
-        #         arguments = ["0", "0", "0", "0", "0", "0", "odom", "base_link"]),
-        #     ]
-        # ))
+                           output='screen'))
+        ld.add_action(Node(package='robot_state_publisher',
+                           executable='robot_state_publisher',
+                           name='robot_state_publisher',
+                           namespace=robot['name'],
+                           output='screen',
+                           parameters=[{'use_sim_time': use_sim_time}],
+                           arguments=[urdf_path]))
 
     return ld
