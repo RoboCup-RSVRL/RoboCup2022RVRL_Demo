@@ -464,7 +464,7 @@
         <plugin name="intel_realsense_r200_depth_driver" filename="libgazebo_ros_camera.so">
           <ros>
           </ros>
-          <camera_name>intel_realsense_r200_depth</camera_name>
+          <camera_name>camera</camera_name>
           <frame_name>camera_frame</frame_name>
           <hack_baseline>0.07</hack_baseline>
           <min_depth>0.001</min_depth>

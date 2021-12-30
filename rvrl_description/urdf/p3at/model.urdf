@@ -149,7 +149,7 @@
 
   <link name="imu_link"/>
 
-  <joint name="scan_joint" type="fixed">
+  <joint name="lidar_joint" type="fixed">
     <parent link="base_link"/>
     <child link="base_scan"/>
     <origin xyz="-0.064 0 0.122" rpy="0 0 0"/>

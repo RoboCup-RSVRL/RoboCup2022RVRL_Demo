@@ -195,7 +195,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /mobile_base/sensors/bumper_pointcloud
+        Value: /robot1/mobile_base/sensors/bumper_pointcloud
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -226,7 +226,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /particle_cloud
+        Value: /robot1/particle_cloud
       Value: true
     - Class: rviz_common/Group
       Displays:
@@ -283,7 +283,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /plan
+            Value: /robot1/plan
           Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
@@ -448,7 +448,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot1/intel_realsense_r200_depth/image_raw
+            Value: /robot1/camera/image_raw
           Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
@@ -479,7 +479,7 @@ Visualization Manager:
             Durability Policy: Volatile
             History Policy: Keep Last
             Reliability Policy: Reliable
-            Value: /robot1/intel_realsense_r200_depth/points
+            Value: /robot1/camera/points
           Use Fixed Frame: true
           Use rainbow: true
           Value: true
@@ -515,7 +515,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /initialpose
+        Value: /robot1/initialpose
     - Class: rviz_default_plugins/PublishPoint
       Single click: true
       Topic:

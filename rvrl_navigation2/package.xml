@@ -6,8 +6,10 @@
   <description>
     ROS 2 launch scripts for navigation2
   </description> 
-  <maintainer email="m.h.shayesteh@gmail.com">Will Son</maintainer>
+  <maintainer email="m.h.shayesteh@gmail.com">Mohammad H. Shayesteh</maintainer>
   <license>Apache 2.0</license>
+  
+  <author email="m.h.shayesteh@gmail.com">Mohammad H. Shayesteh</author>
   <buildtool_depend>ament_cmake</buildtool_depend>
   <exec_depend>nav2_bringup</exec_depend>
   <export>

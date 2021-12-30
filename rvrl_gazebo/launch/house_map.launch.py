@@ -19,7 +19,8 @@ def gen_robot_list():
     robot2 = get_robot_dic('p3at', 'robot2', 3.0, -1, 0.01, 0, 0, 0)
     robot3 = get_robot_dic('p3at', 'robot3', 4.0, -1, 0.01, 0, 0, 0)
 
-    return [robot1, robot2, robot3]
+    return [robot1]
+    # return [robot1, robot2, robot3]
 
 
 def generate_launch_description():
