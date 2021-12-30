@@ -65,7 +65,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
     ```
 
-4. <strong> Set up your rvrl by sourcing the following file </strong>
+4. <strong> Set up RoboCup2022RVRL_Demo project </strong>
     1. Clone RoboCup2022RVRL_Demo project into the your home directory
     ```
     cd ~
@@ -88,6 +88,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     ros2 launch rvrl_gazebo house_map.launch.py
     ```
     As shown in this example, three robots are spawned in the environment, each of them can be controlled manually with the following procedure.
+    
     2. For Robot1: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command
     ```
     ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot1/cmd_vel
