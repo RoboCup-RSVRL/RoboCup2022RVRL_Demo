@@ -82,22 +82,22 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     ```
     
 ## Getting Started
-1. <strong> We launch a sample map with three robots(p3at) as following items: </strong>
-    1. Open a terminal console with Ctrl+Alt+T and launch the house_map world map
+<strong> We launch a sample map with three robots(p3at) as following items: </strong>
+1. Open a terminal console with Ctrl+Alt+T and launch the house_map world map
     ```
     ros2 launch rvrl_gazebo house_map.launch.py
     ```
-    As shown in this example, three robots are spawned in the environment, each of them can be controlled manually with the following procedure.
+As shown in this example, three robots are spawned in the environment, each of them can be controlled manually with the following procedure.
     
-    2. For Robot1: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command
+2. For Robot1: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command
     ```
     ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot1/cmd_vel
     ```
-    3. For Robot2: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command 
+3. For Robot2: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command 
     ```
     ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot2/cmd_vel
     ```
-    4. For Robot3: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command
+4. For Robot3: Open a terminal console with Ctrl+Alt+T and run teleop_twist_keyboard package with following command
     ```
     ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot3/cmd_vel
     ```
