@@ -84,28 +84,34 @@ The requirement for preparing the environment of virtual rescue robots are as fo
 ## Getting Started
 <strong> For getting strated, we launch a sample map with three robots(p3at) as following items: </strong>
 1. Open a terminal console with Ctrl+Alt+T and launch the house_map world map
-    ```
-    ros2 launch rvrl_gazebo house_map.launch.py
-    ```
+```
+ros2 launch rvrl_gazebo house_map.launch.py
+```
 As shown in this example, three robots are spawned in the environment, each of them can be controlled manually with the following procedure.
     
 2. Open terminal 1 with Ctrl+Alt+T to drive the robot1 with following command:
-    ```
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot1/cmd_vel
-    ```
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot1/cmd_vel
+```
 3. Open terminal 2 with Ctrl+Alt+T to drive the robot2 with following command: 
-    ```
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot2/cmd_vel
-    ```
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot2/cmd_vel
+```
 4. Open terminal 3 with Ctrl+Alt+T to drive the robot3 with following command:
-    ```
-    ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot3/cmd_vel
-    ```
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot3/cmd_vel
+```
 5. Open terminal 4 with Ctrl+Alt+T to get the robots image camera with following command:
-    ```
-    ros2 run rqt_image_view rqt_image_view
-    ```
+```
+ros2 run rqt_image_view rqt_image_view
+```
+## SLAM Demo
+In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
+```
+ros2 launch rvrl_cartographer cartographer.launch.py robot_name:=robot1
+```
 
+Here you can change the robot_name:='robotname' to create different SLAM nodes for other robots.
 ## Wiki
 This section will be updated.
 
