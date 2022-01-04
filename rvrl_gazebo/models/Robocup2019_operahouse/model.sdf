@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Robocup2019_operahouse">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Robocup2019_operahouse/operahouse.stl</uri>
+            <scale>3000 3000 0.05</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Robocup2019_operahouse/operahouse.stl</uri>
+            <scale>3000 3000 0.05</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>false</cast_shadows>
+
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="victim_A_hot">
+    <static>true</static>
+    <self_collide>false</self_collide>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://victim_A_hot/victim_A.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://victim_A_hot/victim_A.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>false</cast_shadows>
+        <!-- HOT -->
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK 
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+    </link>
+  </model>
+</sdf>
+

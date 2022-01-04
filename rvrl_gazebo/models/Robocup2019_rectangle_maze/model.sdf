@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Robocup2019_rectangle_maze">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Robocup2019_rectangle_maze/rect_maze.stl</uri>
+            <scale>1160 1160 5</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Robocup2019_rectangle_maze/rect_maze.stl</uri>
+            <scale>1160 1160 5</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>false</cast_shadows>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/pink</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

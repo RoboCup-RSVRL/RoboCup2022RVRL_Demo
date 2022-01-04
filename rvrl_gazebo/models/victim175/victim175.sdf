@@ -1,0 +1,1653 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="victim175">
+    <static>1</static>
+    <self_collide>true</self_collide>
+
+    <link name="head">
+      <pose>0 0 1.625 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.1</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.1</radius></sphere>
+        </geometry>
+      </collision>
+      <visual name="visual_nose">
+        <pose>0 -0.1 -0.01 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.01</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <visual name="visual_rEye">
+        <pose>-0.05 -0.08 0.02 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.01</radius></sphere>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="visual_lEye">
+        <pose>0.05 -0.08 0.02 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.01</radius></sphere>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    
+    <link name="neck">
+      <pose>0 0.02 1.49 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.15</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.15</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="neck_head">
+      <pose>0 0.02 -0.075 0 0 0</pose>
+      <child>head</child>
+      <parent>neck</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.7</lower>
+          <upper>+1.7</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="body">
+      <pose>0 0 1.255 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.34 0.16 0.4</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.34 0.16 0.4</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint type="revolute" name="body_neck">
+      <pose>0 0.06 -0.075 0 0 0</pose>
+      <child>neck</child>
+      <parent>body</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>1</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="waist">
+      <pose>0 0 1.005 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box><size>0.31 0.16 0.15</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.31 0.16 0.1</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 0.05 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.08</radius><length>0.31</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 0.05 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.08</radius><length>0.31</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="body_waist">
+      <pose>0 0 0.05 0 0 0</pose>
+      <child>waist</child>
+      <parent>body</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+<!--
+          <lower>-0.2</lower>
+          <upper>1.7</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+<!--      <axis2>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.05</lower>
+          <upper>+0.05</upper>
+        </limit>
+        <dynamics>
+          <friction>0.05</friction>
+        </dynamics>
+      </axis2> -->
+    </joint>
+    
+    <link name="rHand">
+      <pose>-0.22 0 0.84 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.09 0.02 0.18</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.09 0.02 0.18</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0.02 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.12 0.02 0.09</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0.02 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.12 0.02 0.09</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lHand">
+      <pose>0.22 0 0.84 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.09 0.02 0.18</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.09 0.02 0.18</size></box>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>-0.02 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.12 0.02 0.09</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>-0.02 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.12 0.02 0.09</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rFoot">
+      <pose>-0.1 -0.095 0.02 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.27 0.04</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.27 0.04</size></box>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lFoot">
+      <pose>0.1 -0.095 0.02 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.27 0.04</size></box>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.1 0.27 0.04</size></box>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="rLeg2">
+      <pose>-0.1 0 0.23 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.38</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.38</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.19 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.04</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.19 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.04</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lLeg2">
+      <pose>0.1 0 0.23 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.38</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.38</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.19 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.04</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.19 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.04</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint type="revolute" name="rLeg2_rFoot">
+      <pose>0 0.095 0.02 0 0 0</pose>
+      <child>rFoot</child>
+      <parent>rLeg2</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>-0.7854</lower>
+          <upper>0.7854</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lLeg2_lFoot">
+      <pose>0 0.095 0.02 0 0 0</pose>
+      <child>lFoot</child>
+      <parent>lLeg2</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>-0.7854</lower>
+          <upper>0.7854</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="rLeg1">
+      <pose>-0.1 0 0.66 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.48</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.48</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+      </collision>
+      <visual name="visual3">
+        <pose>0 0 0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision3">
+        <pose>0 0 0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lLeg1">
+      <pose>0.1 0 0.66 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.48</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.48</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+      </collision>
+      <visual name="visual3">
+        <pose>0 0 0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision3">
+        <pose>0 0 0.24 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.055</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="rLeg1_rLeg2">
+      <pose>0 0 0.19 0 0 0</pose>
+      <child>rLeg2</child>
+      <parent>rLeg1</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>0</lower>
+          <upper>3</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lLeg1_lLeg2">
+      <pose>0 0 0.19 0 0 0</pose>
+      <child>lLeg2</child>
+      <parent>lLeg1</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>0</lower>
+          <upper>3</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="rButt">
+      <pose>-0.1 0 0.9275 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.055</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.055</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lButt">
+      <pose>0.1 0 0.9275 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.055</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.055</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="rButt_rLeg1">
+      <pose>0 0 0.24 0 0 0</pose>
+      <child>rLeg1</child>
+      <parent>rButt</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>-2</lower>
+          <upper>0.5</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lButt_lLeg1">
+      <pose>0 0 0.24 0 0 0</pose>
+      <child>lLeg1</child>
+      <parent>lButt</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+<!--
+          <lower>-2</lower>
+          <upper>0.5</upper>
+-->
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="waist_rButt">
+      <pose>0 0 0 0 0 0</pose>
+      <child>rButt</child>
+      <parent>waist</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>+1</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="waist_lButt">
+      <pose>0 0 0 0 0 0</pose>
+      <child>lButt</child>
+      <parent>waist</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1</lower>
+          <upper>+1</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name="rShoulder">
+      <pose>-0.195 0 1.4 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.05</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lShoulder">
+      <pose>0.195 0 1.4 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.05</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 1.570796326794897 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.05</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="body_rShoulder">
+      <pose>0 0 0 0 0 0</pose>
+      <child>rShoulder</child>
+      <parent>body</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+3.2</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="body_lShoulder">
+      <pose>0 0 0 0 0 0</pose>
+      <child>lShoulder</child>
+      <parent>body</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+3.2</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="rArm1U">
+      <pose>-0.22 0 1.3375 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="rArm1L">
+      <pose>-0.22 0 1.2125 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="rArm1U_rArm1L">
+      <pose>0 0 0.0625 0 0 0</pose>
+      <child>rArm1L</child>
+      <parent>rArm1U</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+1.570796326794897</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="lArm1U">
+      <pose>0.22 0 1.3375 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lArm1L">
+      <pose>0.22 0 1.2125 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.04</radius><length>0.125</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.0625 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="lArm1U_lArm1L">
+      <pose>0 0 0.0625 0 0 0</pose>
+      <child>lArm1L</child>
+      <parent>lArm1U</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+1.570796326794897</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="rShoulder_rArm1">
+      <pose>0 0 0.0625 0 0 0</pose>
+      <child>rArm1U</child>
+      <parent>rShoulder</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+3.2</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lShoulder_lArm1">
+      <pose>0 0 0.0625 0 0 0</pose>
+      <child>lArm1U</child>
+      <parent>lShoulder</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+3.2</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="rArm2U">
+      <pose>-0.22 0 1.095 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="rArm2L">
+      <pose>-0.22 0 0.985 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.055 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.055 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="rArm2U_rArm2L">
+      <pose>0 0 0.055 0 0 0</pose>
+      <child>rArm2L</child>
+      <parent>rArm2U</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+1.570796326794897</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <link name="lArm2U">
+      <pose>0.22 0 1.095 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="lArm2L">
+      <pose>0.22 0 0.985 0 0 0</pose>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.11</length></cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual2">
+        <pose>0 0 -0.055 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+        <!-- HOT
+        <material>
+          <emissive>0.5 0.35 0.35 1</emissive>
+          <ambient>0.5 0.35 0.35 1</ambient>
+          <diffuse>0.5 0.35 0.35 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+        <!-- PINK  --->
+        <material>
+          <emissive>0.5 0.355 0.345 1</emissive>
+          <ambient>0.5 0.355 0.345 1</ambient>
+          <diffuse>0.5 0.355 0.345 1</diffuse>
+          <specular>0 0 0 0</specular>
+        </material> -->
+      </visual>
+      <collision name="collision2">
+        <pose>0 0 -0.055 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.05</radius></sphere>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint type="revolute" name="lArm2U_lArm2L">
+      <pose>0 0 0.055 0 0 0</pose>
+      <child>lArm2L</child>
+      <parent>lArm2U</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.570796326794897</lower>
+          <upper>+1.570796326794897</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="rArm1_rArm2">
+      <pose>0 0 0.055 0 0 0</pose>
+      <child>rArm2U</child>
+      <parent>rArm1L</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>2.8</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lArm1_lArm2">
+      <pose>0 0 0.055 0 0 0</pose>
+      <child>lArm2U</child>
+      <parent>lArm1L</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>2.8</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="rArm2_rHand">
+      <pose>0 0 0.09 0 0 0</pose>
+      <child>rHand</child>
+      <parent>rArm2L</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1.57</lower>
+          <upper>1.4</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="lArm2_lHand">
+      <pose>0 0 0.09 0 0 0</pose>
+      <child>lHand</child>
+      <parent>lArm2L</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1.57</lower>
+          <upper>1.4</upper>
+        </limit>
+        <dynamics>
+          <friction>0.01</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    <joint type="revolute" name="world_rFoot">
+      <pose>0 0 0 0 0 0</pose>
+      <child>rFoot</child>
+      <parent>world</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+
+
+    <joint type="revolute" name="world_lFoot">
+      <pose>0 0 0 0 0 0</pose>
+      <child>lFoot</child>
+      <parent>world</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+
+<!--
+    <plugin name="setJointAngle" filename="libset_joint_angle.so">
+      <robotNamespace>victim175</robotNamespace>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <angleName0>neck_head</angleName0>
+      <angleName1>body_neck</angleName1>
+      <angleName2>body_waist</angleName2>
+      <angleName3>rLeg2_rFoot</angleName3>
+      <angleName4>lLeg2_lFoot</angleName4>
+      <angleName5>rLeg1_rLeg2</angleName5>
+      <angleName6>lLeg1_lLeg2</angleName6>
+      <angleName7>rButt_rLeg1</angleName7>
+      <angleName8>lButt_lLeg1</angleName8>
+      <angleName9>waist_rButt</angleName9>
+      <angleName10>waist_lButt</angleName10>
+      <angleName11>body_rShoulder</angleName11>
+      <angleName12>body_lShoulder</angleName12>
+      <angleName13>rArm1U_rArm1L</angleName13>
+      <angleName14>lArm1U_lArm1L</angleName14>
+      <angleName15>rShoulder_rArm1</angleName15>
+      <angleName16>lShoulder_lArm1</angleName16>
+      <angleName17>rArm2U_rArm2L</angleName17>
+      <angleName18>lArm2U_lArm2L</angleName18>
+      <angleName19>rArm1_rArm2</angleName19>
+      <angleName20>lArm1_lArm2</angleName20>
+      <angleName21>rArm2_rHand</angleName21>
+      <angleName22>lArm2_lHand</angleName22>
+      <maxAngles>23</maxAngles>
+      <neck_head>0.0</neck_head>
+      <body_neck>0.0</body_neck>
+      <body_waist>0.0</body_waist>
+      <rLeg2_rFoot>0.0</rLeg2_rFoot>
+      <lLeg2_lFoot>0.0</lLeg2_lFoot>
+      <rLeg1_rLeg2>0.0</rLeg1_rLeg2>
+      <lLeg1_lLeg2>0.0</lLeg1_lLeg2>
+      <rButt_rLeg1>0.0</rButt_rLeg1>
+      <lButt_lLeg1>0.0</lButt_lLeg1>
+      <waist_rButt>0.0</waist_rButt>
+      <waist_lButt>0.0</waist_lButt>
+      <body_rShoulder>0.0</body_rShoulder>
+      <body_lShoulder>0.0</body_lShoulder>
+      <rArm1U_rArm1L>0.0</rArm1U_rArm1L>
+      <lArm1U_lArm1L>0.0</lArm1U_lArm1L>
+      <rShoulder_rArm1>0.0</rShoulder_rArm1>
+      <lShoulder_lArm1>0.0</lShoulder_lArm1>
+      <rArm2U_rArm2L>90.0</rArm2U_rArm2L>
+      <lArm2U_lArm2L>90.0</lArm2U_lArm2L>
+      <rArm1_rArm2>0</rArm1_rArm2>
+      <lArm1_lArm2>0</lArm1_lArm2>
+      <rArm2_rHand>0.0</rArm2_rHand>
+      <lArm2_lHand>0.0</lArm2_lHand>
+      <moveOn>0</moveOn>
+      <moveJoint>13</moveJoint>
+      <moveAngleWidth>30</moveAngleWidth>
+    </plugin>
+-->
+  </model>
+</sdf>
+
