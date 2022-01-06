@@ -122,11 +122,17 @@ ros2 run rviz2 rviz2
 ```
 
 
-## Wiki
-The purpose of launching the wiki is to help the researchers and new teams, how to start with virtual robot project and also to get acquainted with the main challenges of this project by giving some examples.
-You can refer to the Wiki from following link:
+## Useful Links
 
-[Rescule Virtual Robot Wiki](https://rvrl-wiki.github.io/)
+* [Rescue Virtual Robot Wiki](https://rvrl-wiki.github.io/)
+* [RoboCup Federation official Website](https://www.robocup.org/)
+* [Virtual Robot League Official Website](https://rescuesim.robocup.org/competitions/virtual-robot-competition/)
+* [Virtual Robot League in Robocup](https://www.robocup.org/leagues/27)
+* [Official Website Robocup 2022](https://2022.robocup.org/)
+
+
+
+
 
 
 
