@@ -4,19 +4,19 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 
     
 | Task                                                        | Progress                                                 | 
-| :---:                                                       | :----------------:                                   |
-|P3AT Robot: Import Robot Models/Sensors to ROS2              | ![100%](https://progress-bar.dev/100?title=completed)    |
-|P3AT Robot: Multi-Robot Scenario  for RO2                    | ![100%](https://progress-bar.dev/100?title=completed)    |
-|P3AT Robot: Single-Robot SLAM & Mapping Demo for ROS2        | ![100%](https://progress-bar.dev/100?title=progress)     |
-|World Maps: Import Former Maps to ROS 2                      | ![100%](https://progress-bar.dev/100?title=completed)    |
+| :-----------------:                                         | :----------------:                                   |
+|P3AT Robot: Import Robot Models/Sensors to ROS2              | ![100%](https://progress-bar.dev/100?title=done)    |
+|P3AT Robot: Multi-Robot Scenario  for RO2                    | ![100%](https://progress-bar.dev/100?title=done)    |
+|P3AT Robot: Single-Robot SLAM & Mapping Demo for ROS2        | ![100%](https://progress-bar.dev/100?title=done)     |
+|World Maps: Import Former Maps to ROS 2                      | ![100%](https://progress-bar.dev/100?title=done)    |
 |Wiki: Wiki for Virtual Robot Community-Release 1             | ![90%](https://progress-bar.dev/90?title=progress)       |
 |P3AT Robot: Single-Robot Navigation Demo for ROS2            | ![70%](https://progress-bar.dev/70?title=progress)       |
 |P3AT Robot: Single-Robot Exploration Demo for ROS2           | ![10%](https://progress-bar.dev/10?title=progress)       |
-|P3AT Robot: Multi-Robot Map-Merge Demo for ROS2              | ![0%](https://progress-bar.dev/0?title=progress)         |
-|Wiki: Wiki for Virtual Robot Community-Release 2             | ![0%](https://progress-bar.dev/0?title=progress)       |
-|Arial Robot: Import Robot Models/Sensors to ROS2            | ![0%](https://progress-bar.dev/0?title=progress)         |
-|Crawler Robot: Import Robot Models/Sensors to ROS2         | ![0%](https://progress-bar.dev/0?title=progress)         |
-|Wiki: Wiki for Virtual Robot Community-Release 3             | ![0%](https://progress-bar.dev/0?title=progress)       |
+|P3AT Robot: Multi-Robot Map-Merge Demo for ROS2              | ![0%](https://progress-bar.dev/0?title=to-do)         |
+|Wiki: Wiki for Virtual Robot Community-Release 2             | ![0%](https://progress-bar.dev/0?title=to-do)       |
+|Arial Robot: Import Robot Models/Sensors to ROS2             | ![0%](https://progress-bar.dev/0?title=to-do)         |
+|Crawler Robot: Import Robot Models/Sensors to ROS2           | ![0%](https://progress-bar.dev/0?title=to-do)         |
+|Wiki: Wiki for Virtual Robot Community-Release 3             | ![0%](https://progress-bar.dev/0?title=to-do)       |
     
 
 ## Requirements
@@ -123,6 +123,10 @@ ros2 run rviz2 rviz2
 
 
 ## Wiki
-This section will be updated.
+The purpose of launching the wiki is to help the researchers and new teams, how to start with virtual robot project and also to get acquainted with the main challenges of this project by giving some examples.
+You can refer to the Wiki from following link:
+
+[Rescule Virtual Robot Wiki](https://rvrl-wiki.github.io/)
+
 
 
