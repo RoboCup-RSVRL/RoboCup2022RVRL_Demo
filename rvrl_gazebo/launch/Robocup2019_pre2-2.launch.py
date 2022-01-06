@@ -15,18 +15,17 @@ from launch_ros.actions import PushRosNamespace
 
 
 def gen_robot_list():
-    robot1 = get_robot_dic('p3at', 'robot1', 27, -88, 0.03, 0, 0, 0)
-    robot2 = get_robot_dic('p3at', 'robot2', 49, -83, 0.03, 0, 0, 0)
-    robot3 = get_robot_dic('p3at', 'robot3', 1.0, -2, 0.03, 0, 0, 0)
-    robot4 = get_robot_dic('p3at', 'robot4', -20, -57, 0.03, 0, 0, 0)
-
+    robot1 = get_robot_dic('p3at', 'robot1', 134, -45, 0.03, 0, 0, 0)
+    robot2 = get_robot_dic('p3at', 'robot2', 132, -45, 0.03, 0, 0, 0)
+    robot3 = get_robot_dic('p3at', 'robot3', 100, -60, 0.03, 0, 0, 0)
+    robot4 = get_robot_dic('p3at', 'robot4', 100, -57, 0.01, 0, 0, 0)
     return [robot1, robot2, robot3,robot4]
 
 
 def generate_launch_description():
     robots = gen_robot_list()
 
-    ld = spawn_world('Robocup2019_pre1-1.model')
+    ld = spawn_world('Robocup2019_pre2-2.model')
 
     for robot in robots:
         ld.add_action(spawn_robot(robot))
