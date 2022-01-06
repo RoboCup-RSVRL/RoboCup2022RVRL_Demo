@@ -2,18 +2,22 @@
 
 This year, the  <strong>rescue virtual robot league</strong> infrastructure is migrated to <strong>ROS 2 foxy-version</strong>. All sections and packages are undergoing major changes, and we will provide practical demos of each major challenge in the league to better understand the new infrastructure according to the following program:
 
-
-| Task                    | Goal                         | Progress                                               | 
-|---                      | ---------------              | ---------------                                        |
-|P3AT Single-Robot Spawn  |Immigration to ROS 2          |   ![100%](https://progress-bar.dev/100?title=completed)|
-|P3AT Multi-Robot Spawn   |Immigration to ROS 2          |   ![100%](https://progress-bar.dev/100?title=progress)   |
-|SLAM & Mapping           |Prepapre a demo for ROS 2     |   ![100%](https://progress-bar.dev/100?title=progress)   |
-|2021 Maps                |Import world file to ROS 2    |   ![70%](https://progress-bar.dev/70?title=progress)   |
-|Navigation               |Prepapre a demo for ROS 2     |   ![70%](https://progress-bar.dev/70?title=progress)     |
-|Exploration              |Prepapre a demo for ROS 2     |   ![1%](https://progress-bar.dev/1?title=progress)     |
-|Multi-Robot Map          |Prepapre a demo for ROS 2     |   ![1%](https://progress-bar.dev/1?title=progress)     |
-|Arial Robots             |Immigration to ROS 2          |   ![1%](https://progress-bar.dev/1?title=progress)     |
-|Wiki                     |Prepapre a e-manual for Virtual Robot Community |   ![60%](https://progress-bar.dev/60?title=progress)   |
+    
+| Task                                                        | Progress                                                 | 
+| :---:                                                       | :----------------:                                   |
+|P3AT Robot: Import Robot Models/Sensors to ROS2              | ![100%](https://progress-bar.dev/100?title=completed)    |
+|P3AT Robot: Multi-Robot Scenario  for RO2                    | ![100%](https://progress-bar.dev/100?title=completed)    |
+|P3AT Robot: Single-Robot SLAM & Mapping Demo for ROS2        | ![100%](https://progress-bar.dev/100?title=progress)     |
+|World Maps: Import Former Maps to ROS 2                      | ![100%](https://progress-bar.dev/100?title=completed)    |
+|Wiki: Wiki for Virtual Robot Community-Release 1             | ![90%](https://progress-bar.dev/90?title=progress)       |
+|P3AT Robot: Single-Robot Navigation Demo for ROS2            | ![70%](https://progress-bar.dev/70?title=progress)       |
+|P3AT Robot: Single-Robot Exploration Demo for ROS2           | ![10%](https://progress-bar.dev/10?title=progress)       |
+|P3AT Robot: Multi-Robot Map-Merge Demo for ROS2              | ![0%](https://progress-bar.dev/0?title=progress)         |
+|Wiki: Wiki for Virtual Robot Community-Release 2             | ![0%](https://progress-bar.dev/0?title=progress)       |
+|Arial Robot: Import Robot Models/Sensors to ROS2            | ![0%](https://progress-bar.dev/0?title=progress)         |
+|Crawler Robot: Import Robot Models/Sensors to ROS2         | ![0%](https://progress-bar.dev/0?title=progress)         |
+|Wiki: Wiki for Virtual Robot Community-Release 3             | ![0%](https://progress-bar.dev/0?title=progress)       |
+    
 
 ## Requirements
 The requirement for preparing the environment of virtual rescue robots are as follows:
