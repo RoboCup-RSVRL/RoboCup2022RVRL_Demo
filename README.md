@@ -124,7 +124,7 @@ ros2 run rviz2 rviz2
 
 ## Useful Links
 
-* [Rescue Virtual Robot Wiki](https://rvrl-wiki.github.io/)
+* [Rescue Virtual Robot Wiki](https://robocup-rsvrl.github.io/)
 * [RoboCup Federation official Website](https://www.robocup.org/)
 * [Virtual Robot League Official Website](https://rescuesim.robocup.org/competitions/virtual-robot-competition/)
 * [Virtual Robot League in Robocup](https://www.robocup.org/leagues/27)
