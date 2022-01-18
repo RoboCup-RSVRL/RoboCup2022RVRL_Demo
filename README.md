@@ -72,6 +72,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     1. Clone RoboCup2022RVRL_Demo project into the your home directory
     ```
     cd ~
+    sudo apt-get install git
     git clone https://github.com/RoboCup-RSVRL/RoboCup2022RVRL_Demo.git
     ```
     2. Build RoboCup2022RVRL_Demo project
