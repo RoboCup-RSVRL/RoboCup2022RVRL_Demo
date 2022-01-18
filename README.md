@@ -48,6 +48,8 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     sudo apt update
     sudo apt install ros-foxy-desktop
     sudo apt install ros-foxy-ros-base
+    sudo apt install python3-colcon-common-extensions
+
     ```
     3. Install Gazebo11
     ```
