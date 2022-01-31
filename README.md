@@ -65,7 +65,11 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     sudo apt install ros-foxy-navigation2
     sudo apt install ros-foxy-nav2-bringup
     ```
-    6. Add sourcing to your shell startup script by sourcing the setup.bash file 
+    6. Install Image view
+    ```
+    sudo apt install ros-foxy-rqt-image-view
+     ```
+    7. Add sourcing to your shell startup script by sourcing the setup.bash file 
     ```
     echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
     ```
