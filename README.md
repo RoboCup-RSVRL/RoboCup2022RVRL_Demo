@@ -97,6 +97,10 @@ The requirement for preparing the environment of virtual rescue robots are as fo
 ```
 ros2 launch rvrl_gazebo house_map.launch.py
 ```
+This should launch the following window:
+
+![house_map](images/RoboCup2022housemap.png)
+
 As shown in this example, three robots are spawned in the environment, each of them can be controlled manually with the following procedure.
     
 2. Open terminal 1 with Ctrl+Alt+T to drive the robot1 with following command:
