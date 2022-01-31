@@ -134,7 +134,7 @@ Here you can change the robot_name:='robotname' to create different SLAM nodes f
 ```
 ros2 run rviz2 rviz2
 ```
-In the lower left you can Add a display. Select a map as display type and assign ```/robot1/map' as topic to this display.<br>
+In the lower left you can Add a display. Select a map as display type and assign ```/robot1/map``` as topic to this display.<br>
 <img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/RoboCup2022odometrymap.png width=500>
 
 ## Useful Links
