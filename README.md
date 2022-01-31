@@ -119,6 +119,9 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=robot3/cmd_vel
 ```
 ros2 run rqt_image_view rqt_image_view
 ```
+In the window you could for instance select the depth camera of robot1:<br>
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/RoboCup2022depth.png width=300>
+
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
 ```
