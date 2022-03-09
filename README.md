@@ -84,6 +84,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     2. Build RoboCup2022RVRL_Demo project
     ```
     cd RoboCup2022RVRL_Demo
+    source /opt/ros/foxy/setup.bash
     colcon build
     ```
     3. Add sourcing to RoboCup2022RVRL_Demo shell startup script by sourcing the setup.bash file 
