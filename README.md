@@ -72,6 +72,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     7. Add sourcing to your shell startup script by sourcing the setup.bash file 
     ```
     echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
     ```
 
 4. <strong> Set up RoboCup2022RVRL_Demo project </strong>
@@ -90,6 +91,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     3. Add sourcing to RoboCup2022RVRL_Demo shell startup script by sourcing the setup.bash file 
     ```
     echo "source /home/{your username}/RoboCup2022RVRL_Demo/install/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
     ```
     
 ## Getting Started
