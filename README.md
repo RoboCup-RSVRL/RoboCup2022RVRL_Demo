@@ -95,7 +95,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     ```
     
 ## Getting Started
-<strong> For getting strated, we launch a sample map with three robots(p3at) as following items: </strong>
+<strong> For getting started, we launch a sample map with three robots(p3at) as following items: </strong>
 1. Open a terminal console with Ctrl+Alt+T and launch the house_map world map
 ```
 ros2 launch rvrl_gazebo house_map.launch.py
