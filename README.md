@@ -6,7 +6,7 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 | Type           | Task                                                        | Progress                                                 | 
 | :---------:    | :-----------------:                                         | :----------------:                                   |
 | P3AT Robot | Import Robot Models/Sensors to ROS2              | ![100%](https://progress-bar.dev/100?title=done)    |
-| P3AT Robot | Multi-Robot Scenario  for RO2                    | ![100%](https://progress-bar.dev/100?title=done)    |
+| P3AT Robot | Multi-Robot Scenario  for ROS2                    | ![100%](https://progress-bar.dev/100?title=done)    |
 | P3AT Robot | Single-Robot SLAM & Mapping Demo for ROS2        | ![100%](https://progress-bar.dev/100?title=done)     |
 | Maps       | Import Former Maps to ROS 2                      | ![100%](https://progress-bar.dev/100?title=done)    |
 | Wiki       | Wiki for Virtual Robot Community-Release 1             | ![100%](https://progress-bar.dev/100?title=done)       |
