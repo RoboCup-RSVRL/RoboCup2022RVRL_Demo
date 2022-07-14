@@ -145,7 +145,10 @@ When this program is stopped with CTL-C, the robot continues to drive around in 
 ```
 python rvrl_tutorial/stop_robot1.py
 ```
-**Tutorial assignment**: Add logic to prevent that the robot drives backwards when there is an obstacle at its back.
+**Tutorial assignment**: Add logic to prevent that the robot drives backwards when there is an obstacle at its back. The 8 sonar sensors emit beams like:
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/BackSonar.png width=400>
+
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
 ```
