@@ -95,7 +95,7 @@ The requirement for preparing the environment of virtual rescue robots are as fo
     ```
     
 ## Getting Started
-<strong> For getting started, we launch a sample map with three robots(p3at) as following items: </strong>
+<strong> For getting started, we launch a sample map with three robots (p3at) as following items: </strong>
 1. Open a terminal console with Ctrl+Alt+T and launch the house_map world map
 ```
 ros2 launch rvrl_gazebo house_map.launch.py
@@ -124,6 +124,10 @@ ros2 run rqt_image_view rqt_image_view
 ```
 In the window you could for instance select the depth camera of robot1:<br>
 <img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/RoboCup2022depth.png width=300>
+
+You can now drive the robot1 around with this view from terminal 1. First reduce the speed with command 'z', and start with moving to the front right with 'o'. Don't forget to stop before you hit the wall with 'k'.
+
+You see that it is not easy to drive around on the image_view alone. To explore a larger area you need a map. A map can be generated with a Simultaneous Localization and Mapping algorithm (SLAM).
 
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
