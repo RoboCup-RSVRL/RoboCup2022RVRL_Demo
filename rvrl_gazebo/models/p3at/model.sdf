@@ -215,8 +215,7 @@
         </inertial>
         <sensor name="so0" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.065 +0.165 0 0 0 +1.5707963268</pose> <!-- 90 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -249,8 +248,7 @@
         </sensor>
         <sensor name="so1" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.035 +0.1025 0 0 0 +0.872664626</pose> <!-- 50 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -283,9 +281,7 @@
         </sensor>
         <sensor name="so2" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
-            <!--visualize>true</visualize-->
+            <visualize>false</visualize>
             <pose>-0.02 +0.0575 0 0 0 +0.5235987756</pose> <!-- 30 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -318,8 +314,7 @@
         </sensor>
         <sensor name="so3" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.01 +0.0115 0 0 0 +0.1745329252</pose> <!-- 10 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -352,8 +347,7 @@
         </sensor>
         <sensor name="so4" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.01 -0.0115 0 0 0 -0.1745329252</pose> <!-- 10 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -386,8 +380,7 @@
         </sensor>
         <sensor name="so5" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.02 -0.0575 0 0 0 -0.5235987756</pose> <!-- 30 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -420,8 +413,7 @@
         </sensor>
         <sensor name="so6" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.035 -0.1025 0 0 0 -0.872664626</pose> <!-- 50 degrees -->
             <update_rate>3</update_rate>
             <ray>
@@ -454,8 +446,7 @@
         </sensor>
         <sensor name="so7" type="ray">
             <always_on>true</always_on>
-            <!--visualize>false</visualize-->
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <pose>-0.065 -0.165 0 0 0 -1.5707963268</pose> <!-- 90 degrees -->
             <update_rate>3</update_rate>
             <ray>
