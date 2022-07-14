@@ -127,8 +127,25 @@ In the window you could for instance select the depth camera of robot1:<br>
 
 You can now drive the robot1 around with this view from terminal 1. First reduce the speed with command 'z', and start with moving to the front right with 'o'. Don't forget to stop before you hit the wall with 'k'.
 
-You see that it is not easy to drive around on the image_view alone. To explore a larger area you need a map. A map can be generated with a Simultaneous Localization and Mapping algorithm (SLAM).
+You see that it is not easy to drive around on the image_view alone. To explore a larger area you need a map. A map can be generated with a Simultaneous Localization and Mapping algorithm (SLAM). Or you can let the robot drive around autonomously.
 
+## Obstacle Avoidance tutorial
+
+The P3AT has two sets of sonar sensors, 8 sonars at the front and 8 sonars at the back. See the next figure. Those sensors are notorious noisy, but have the benefit that they are mounted on the body of the robots. So the sonar sensors detect the body of the other robots, while the laserscanner mounted on top looks over the body and only detects the laserscanners on top of the other robots.
+
+<img src=https://raw.githubusercontent.com/cyberbotics/webots/develop/docs/guide/images/robots/pioneer-3at/sonars.png width=200>
+
+A simple obstacle avoidance behavior can be made, which detects if there is a obstacle in front, to the front-left or front-right. When there is an obstacle in front, it drives backwards. When there is an obstacle front-left or -right, it turns away. By adding a random component the robot has less change to get stuck.
+
+This obstacle avoidance behavior can be found in the rvrl_tutorial directory. It can be started with the command:
+```
+python rvrl_tutorial/obstacle_avoidance_robot1.py
+```
+When this program is stopped with CTL-C, the robot continues to drive around in the last direction given. The movement can be stopped with the command:
+```
+python rvrl_tutorial/stop_robot1.py
+```
+**Tutorial assignment**: Add logic to prevent that the robot drives backwards when there is an obstacle at its back.
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
 ```
