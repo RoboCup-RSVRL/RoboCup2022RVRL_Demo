@@ -193,6 +193,32 @@
     </visual>
   </link>
 
+  <!-- begin of sonar added by Arnoud Visser - July 2022 -->
+  <joint name="base_front_joint" type="fixed">
+        <origin rpy="0 0 0" xyz="0.0 0 0.0"/>
+        <parent link="base_link"/>
+        <child link="front_sonar"/>
+    </joint>
+    <link name="front_sonar">
+        <origin rpy="0 0 0" xyz="0.193 0 0.25"/>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <!--geometry name="pioneer_geom">
+        <mesh filename="package://amr_robots_description/meshes/p3at_meshes/front_sonar.stl"/>
+      </geometry-->
+      <material name="SonarYellow">
+        <color rgba="0.715 0.583 0.210 1.0"/>
+      </material>
+    </visual>
+    </link>
+    <!-- end of sonar added by Arnoud Visser - July 2022 -->
+
+
   <joint name="camera_joint" type="fixed">
     <origin xyz="0.064 -0.065 0.094" rpy="0 0 0"/>
     <parent link="base_link"/>
