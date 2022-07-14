@@ -226,6 +226,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -259,6 +265,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -292,6 +304,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -325,6 +343,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -358,6 +382,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -391,6 +421,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -424,6 +460,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -457,6 +499,12 @@
                       <min_angle>-0.1396263402</min_angle>
                       <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
                   </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
                 </scan>
                 <range>
                     <min>0.1</min>
@@ -482,6 +530,338 @@
         <pose> 0.0 0 0.0 0 0 0 </pose>
         <parent>base_link</parent>
         <child>front_sonar</child>
+    </joint>
+    <link name="back_sonar">
+        <pose> -0.21 0 +0.08 0 0 3.1415926536 </pose>
+        <inertial>
+            <mass>0.1</mass>
+            <pose> 0.0 0 0.0 0 0 0 </pose>
+            <inertia>
+                <ixx>1.0</ixx>
+                <ixy>0.0</ixy>
+                <ixz>0.0</ixz>
+                <iyy>1.0</iyy>
+                <iyz>0.0</iyz>
+                <izz>1.0</izz>
+            </inertia>
+        </inertial>
+        <sensor name="so8" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.065 +0.165 0 0 0 +1.5707963268</pose> <!-- 90 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so8/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so9" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.035 +0.1025 0 0 0 +0.872664626</pose> <!-- 50 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so9/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so10" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.02 +0.0575 0 0 0 +0.5235987756</pose> <!-- 30 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so10/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so11" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.01 +0.0115 0 0 0 +0.1745329252</pose> <!-- 10 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so11/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so12" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.01 -0.0115 0 0 0 -0.1745329252</pose> <!-- 10 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so12/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so13" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.02 -0.0575 0 0 0 -0.5235987756</pose> <!-- 30 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so13/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so14" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.035 -0.1025 0 0 0 -0.872664626</pose> <!-- 50 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so14/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+        <sensor name="so15" type="ray">
+            <always_on>true</always_on>
+            <visualize>false</visualize>
+            <pose>-0.065 -0.165 0 0 0 -1.5707963268</pose> <!-- 90 degrees -->
+            <update_rate>3</update_rate>
+            <ray>
+                <scan>
+                  <horizontal>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </horizontal>
+                  <vertical>
+                      <samples>4</samples>
+                      <angle_increment>0.0698131701</angle_increment><!-- 4 degrees -->
+                      <min_angle>-0.1396263402</min_angle>
+                      <max_angle>+0.1396263402</max_angle> <!-- opening angle of 16 degrees -->
+                  </vertical>
+                </scan>
+                <range>
+                    <min>0.1</min>
+                    <max>4</max>
+                    <resolution>0.2</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.1</stddev>
+                </noise>
+            </ray>
+            <plugin name="p3at_back_sonar" filename="libgazebo_ros_ray_sensor.so">
+                 <ros>
+                     <remapping>~/out:=so15/range</remapping>
+                 </ros>
+                 <output_type>sensor_msgs/Range</output_type>
+                 <frame_name>back_sonar</frame_name>
+            </plugin>
+        </sensor>
+    </link>
+    <joint name="base_back_joint" type="fixed">
+        <pose> 0.0 0 0.0 0 0 0 </pose>
+        <parent>base_link</parent>
+        <child>back_sonar</child>
     </joint>
     <!-- end of sonar added by Arnoud Visser - July 2022 -->
 

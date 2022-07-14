@@ -33,7 +33,7 @@ class ObstacleAvoidance(Node):
         timer_period = 3.0  # 0.33 Hz  
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
-        self.COR_DIST = 0.75
+        self.COR_DIST = 0.5
         self.obstacle_front_right = False
         self.obstacle_FFR = False
         self.obstacle_FFL = False
