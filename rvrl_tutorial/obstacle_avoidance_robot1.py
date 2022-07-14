@@ -80,14 +80,14 @@ class ObstacleAvoidance(Node):
         out_msg.linear.x = random.random() * 0.2
         out_msg.angular.z = random.triangular(-1.0,1.0,0.0) * 0.4
 
-        if(self.obstacle_front_left == True or self.obstacle_front_right == True ):
+        if(self.obstacle_FFL == True or self.obstacle_FFR == True ):
             out_msg.linear.x = -random.random() * 0.05
             out_msg.angular.z = random.triangular(-1.0,1.0,0.0) * 0.1
 
-        if(self.obstacle_FFR == True):
+        if(self.obstacle_front_right == True):
             out_msg.angular.z = random.triangular(0.0,1.0,0.0) * 0.4
 
-        if(self.obstacle_FFL == True):
+        if(self.obstacle_front_left == True):
             out_msg.angular.z = random.triangular(-1.0,0.0,0.0) * 0.4
 
         print('timer callback #%d with speed %f and angular speed %f' % (self.i,out_msg.linear.x, out_msg.angular.z))
