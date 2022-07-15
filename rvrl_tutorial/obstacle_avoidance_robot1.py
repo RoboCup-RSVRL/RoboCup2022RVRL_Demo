@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # author: Arnoud Visser  
-# date: July 13, 2022
+# date: July 15, 2022
 # license: free to use for educational and research purposes
 
 import rclpy
@@ -76,19 +76,27 @@ class ObstacleAvoidance(Node):
             self.obstacle_front_right = False
 
     def timer_callback(self):
+
         out_msg = Twist()
-        out_msg.linear.x = random.random() * 0.2
+
         out_msg.angular.z = random.triangular(-1.0,1.0,0.0) * 0.4
 
-        if(self.obstacle_FFL == True or self.obstacle_FFR == True ):
-            out_msg.linear.x = -random.random() * 0.05
-            out_msg.angular.z = random.triangular(-1.0,1.0,0.0) * 0.1
+        if(self.i > 1):
+            out_msg.linear.x = random.random() * 0.2
+        else:
+            out_msg.linear.x = 0.0 # don't rush forward at the first timestep
+            out_msg.angular.z = -1.0 # first look around
 
-        if(self.obstacle_front_right == True):
+        if(self.obstacle_front_right):
             out_msg.angular.z = random.triangular(0.0,1.0,0.0) * 0.4
 
-        if(self.obstacle_front_left == True):
+        if(self.obstacle_front_left):
             out_msg.angular.z = random.triangular(-1.0,0.0,0.0) * 0.4
+
+        if(self.obstacle_FFL or self.obstacle_FFR ):
+            print('obstacle in front')
+            out_msg.linear.x = -random.random() * 0.05
+            out_msg.angular.z = random.triangular(-1.0,1.0,0.0) * 0.1
 
         print('timer callback #%d with speed %f and angular speed %f' % (self.i,out_msg.linear.x, out_msg.angular.z))
 
