@@ -149,6 +149,55 @@ python rvrl_tutorial/stop_robot1.py
 
 <img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/BackSonar.png width=400>
 
+## Advanced Obstacle Avoidance tutorial
+
+Although not perfect, the obstacle avoidance works quite reliable. Yet, robots can encounter difficult to evade obstacles. For instance, see the following situation:
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/SonarBelowLowTable.png width=400>
+
+The robot encounters a low table. You can recreate this situation with the command:
+```
+ros2 launch rvrl_gazebo before_table.launch.py
+```
+As you can see, the sonar beams (only so2 and so5 are visualized) are quite wide(opening angle of 16 degrees), but the range the report is an average value. In this case both sonar sensors report ~0.9m, above the collision threshold.
+
+For the laserscanner the situation is even worse, because it the laser beams are emitted perfect horizontally (2D scan).
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/LaserBelowLowTable.png width=400>
+
+Even when you create a map of the room (see the SLAM section) only 4 tiny dots from the table legs are visible (and the shadows the cast on the map):
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/LaserBelowTable.png width=400>
+
+But luckily the P3AT model is equipped with a rs200 <a href=https://www.intelrealsense.com/ros/>Intel RealSense</a> camera. Camera devices have a wide field of view, so the table-top can be clearly seen from the start position:
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/LaserBelowTable.png width=200>
+
+This image can be seen from the viewer that you opened terminal 4 with the command:
+```
+ros2 run rqt_image_view rqt_image_view
+```
+The pixels in this image could be interpreted as depth in meters, although to the human eye the table-top in the foreground and the open space in the background look the same. Depth images can be converted into disparity images (the inverse of depth), which can be artificial coloured. With this artificial colouring the table top clearly stands out as nearby obstacle:
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/DisparityTable.png width=200>
+
+This disparity images can be generated when the following code is started:
+```
+python rvrl_tutorial/disparity_camera1.py
+```
+This code publishes the topic '/robot1/camera/depth/disparity_image', which can be displayed in following way.
+Start the ros-visualisation tool rviz2 with the command: 
+```
+ros2 run rviz2 rviz2
+```
+In the lower left you can Add a display. Select a Image as display and assign ```/robot1/camera/depth/disparity_image``` as topic to this display.
+
+As you can see, the disparity image with 5 red blocks, which can become green when no obstacle is detected in that direction.
+
+**Tutorial assignment**: Add logic to prevent that the robot drives in the direction where an obstacle is seen in the depth image:
+
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/EvadingTableVisualizedWithDisparity.png width=500>
+
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
 ```

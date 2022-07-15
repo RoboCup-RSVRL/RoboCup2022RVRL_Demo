@@ -5260,7 +5260,8 @@
       <static>0</static>
       <link name='link'>
         <collision name='surface'>
-          <pose frame=''>0 0 1 0 -0 0</pose>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
+          <pose frame=''>0 0 0.4 0 -0 0</pose>
           <geometry>
             <box>
               <size>1.5 0.8 0.03</size>
@@ -5276,7 +5277,8 @@
           </surface>
         </collision>
         <visual name='visual1'>
-          <pose frame=''>0 0 1 0 -0 0</pose>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
+          <pose frame=''>0 0 0.4 0 -0 0</pose>
           <geometry>
             <box>
               <size>1.4 0.8 0.04</size>
@@ -5290,7 +5292,9 @@
           </material>
         </visual>
         <collision name='front_left_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>0.68 0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5299,7 +5303,9 @@
           </geometry>
         </collision>
         <visual name='front_left_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>0.68 0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5314,7 +5320,9 @@
           </material>
         </visual>
         <collision name='front_right_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>0.68 -0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5323,7 +5331,9 @@
           </geometry>
         </collision>
         <visual name='front_right_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>0.68 -0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5338,7 +5348,9 @@
           </material>
         </visual>
         <collision name='back_right_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>-0.68 -0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5347,7 +5359,9 @@
           </geometry>
         </collision>
         <visual name='back_right_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>-0.68 -0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5362,7 +5376,9 @@
           </material>
         </visual>
         <collision name='back_left_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>-0.68 0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5371,7 +5387,9 @@
           </geometry>
         </collision>
         <visual name='back_left_leg'>
+          <!-- Arnoud Visser July 15, 2022: low table as obstacle -->
           <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
+          <!--pose frame=''>-0.68 0.38 -0.1 0 -0 0</pose-->
           <geometry>
             <cylinder>
               <radius>0.02</radius>
@@ -5386,7 +5404,7 @@
           </material>
         </visual>
       </link>
-      <pose frame=''>-2.65728 2.42376 0 0 -0 0</pose>
+      <pose frame=''>-2.65728 2.42376 -0.0 0 -0 0</pose> 
     </model>
     <model name='table_marble'>
       <static>1</static>
