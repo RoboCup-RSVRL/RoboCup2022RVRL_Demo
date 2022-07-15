@@ -11,6 +11,8 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 | Maps       | Import Former Maps to ROS 2                      | ![100%](https://progress-bar.dev/100?title=done)    |
 | Wiki       | Wiki for Virtual Robot Community-Release 1             | ![100%](https://progress-bar.dev/100?title=done)       |
 | P3AT Robot | Single-Robot Navigation Demo for ROS2            | ![70%](https://progress-bar.dev/70?title=progress)       |
+| P3AT Robot | Single-Robot Obstacle Avoidance tutorial for ROS2            | ![100%](https://progress-bar.dev/100?title=progress)       |
+| P3AT Robot | Single-Robot Advanced Obstacle Avoidance tutorial for ROS2            | ![90%](https://progress-bar.dev/90?title=progress)       |
 | P3AT Robot | Single-Robot Exploration Demo for ROS2           | ![10%](https://progress-bar.dev/10?title=progress)       |
 | P3AT Robot | Multi-Robot Map-Merge Demo for ROS2              | ![0%](https://progress-bar.dev/0?title=to-do)         |
 | Wiki       | Wiki for Virtual Robot Community-Release 2             | ![0%](https://progress-bar.dev/0?title=to-do)       |
@@ -194,9 +196,9 @@ In the lower left you can Add a display. Select a Image as display and assign ``
 
 As you can see, the disparity image with 5 red blocks, which can become green when no obstacle is detected in that direction.
 
-**Tutorial assignment**: Add logic to prevent that the robot drives in the direction where an obstacle is seen in the depth image:
-
 <img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/EvadingTableVisualizedWithDisparity.png width=500>
+
+**Tutorial assignment**: Add logic to prevent that the robot drives in the direction where an obstacle is seen in the depth image:
 
 ## SLAM Demo
 1. In this demo, we use the cartographer package for SLAM demo. After driving the robots, then create the SLAM node for each robots using the following command:
