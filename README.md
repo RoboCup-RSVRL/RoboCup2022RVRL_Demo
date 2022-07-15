@@ -173,7 +173,7 @@ Even when you create a map of the room (see the SLAM section) only 4 tiny dots f
 
 But luckily the P3AT model is equipped with a rs200 <a href=https://www.intelrealsense.com/ros/>Intel RealSense</a> camera. Camera devices have a wide field of view, so the table-top can be clearly seen from the start position:
 
-<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/LaserBelowTable.png width=200>
+<img src=https://staff.fnwi.uva.nl/a.visser/research/roboresc/2022/rqt_table_view.png width=200>
 
 This image can be seen from the viewer that you opened terminal 4 with the command:
 ```
