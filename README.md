@@ -12,7 +12,7 @@ This year, the  <strong>rescue virtual robot league</strong> infrastructure is m
 | Wiki       | Wiki for Virtual Robot Community-Release 1             | ![100%](https://progress-bar.dev/100?title=done)       |
 | P3AT Robot | Single-Robot Navigation Demo for ROS2            | ![70%](https://progress-bar.dev/70?title=progress)       |
 | P3AT Robot | Single-Robot Obstacle Avoidance tutorial for ROS2            | ![100%](https://progress-bar.dev/100?title=done)       |
-| P3AT Robot | Single-Robot Advanced Obstacle Avoidance tutorial for ROS2            | ![90%](https://progress-bar.dev/90?title=progress)       |
+| P3AT Robot | Single-Robot Advanced Obstacle Avoidance tutorial for ROS2            | ![100%](https://progress-bar.dev/100?title=done)       |
 | P3AT Robot | Single-Robot Exploration Demo for ROS2           | ![10%](https://progress-bar.dev/10?title=progress)       |
 | P3AT Robot | Multi-Robot Map-Merge Demo for ROS2              | ![0%](https://progress-bar.dev/0?title=to-do)         |
 | Wiki       | Wiki for Virtual Robot Community-Release 2             | ![0%](https://progress-bar.dev/0?title=to-do)       |
@@ -187,8 +187,14 @@ This disparity images can be generated when the following code is started:
 ```
 python rvrl_tutorial/disparity_camera1.py
 ```
-This code publishes the topic '/robot1/camera/depth/disparity_image', which can be displayed in following way.
-Start the ros-visualisation tool rviz2 with the command: 
+This code publishes the topic '/robot1/camera/depth/disparity_image', which can be displayed in two ways. The simplist option is to use image_view. This can be started with the following way:
+
+```
+ros2 run image_view image_view --ros-args --remap image:=/robot1/camera/depth/disparity_image
+```
+
+The other option is to use the ros-visualisation tool rviz2.
+Start the tool rviz2 with the command: 
 ```
 ros2 run rviz2 rviz2
 ```

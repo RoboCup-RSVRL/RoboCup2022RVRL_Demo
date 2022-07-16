@@ -151,7 +151,8 @@ class ObstacleAvoidanceDepth(Node):
 
 #        cv2.imwrite('/tmp/DisparityImage.png', color_image)
 
-        out_msg = self.bridge.cv2_to_imgmsg(color_image, encoding="passthrough") 
+        out_msg = self.bridge.cv2_to_imgmsg(color_image, encoding="bgr8")
+
         self.disparity.publish(out_msg)
 
     def timer_callback(self):
