@@ -65,11 +65,13 @@ class ObstacleAvoidanceDepth(Node):
         #cv_image = self.bridge.imgmsg_to_cv2(msg, "32FC1") # 4 chars one float
         cv_image = self.bridge.imgmsg_to_cv2(msg)
 
-        depth_fl  = cv_image[v, fl] - 0.1  # camera is further back
-        depth_ffl = cv_image[v, ffl] - 0.1
-        depth_f   = cv_image[v, f] - 0.1 
-        depth_ffr = cv_image[v, ffr] - 0.1
-        depth_fr  = cv_image[v, fr] - 0.1 
+        # depth -0.1 because camera is further back
+
+        depth_fl  = np.mean(cv_image[v-10:v+10, fl-10:fl+10]) - 0.1
+        depth_ffl = np.mean(cv_image[v-10:v+10, ffl-10:ffl+10]) - 0.1
+        depth_f   = np.mean(cv_image[v-10:v+10, f-10:f+10]) - 0.1
+        depth_ffr   = np.mean(cv_image[v-10:v+10, ffr-10:ffr+10]) - 0.1
+        depth_fr   = np.mean(cv_image[v-10:v+10, fr-10:fr+10]) - 0.1
 
         # Output the measure
         # print('Center distance : value %f pixel for pixel (%d,%d) with sonar %f m)' % (depth_f, v, f, self.obstacle_distance))
@@ -86,7 +88,7 @@ class ObstacleAvoidanceDepth(Node):
         else:
             self.obstacle_FFL -= 1
 
-        if (depth_ffl < self.COR_DIST):
+        if (depth_f < self.COR_DIST):
             self.obstacle_front += 1  
         else:
             self.obstacle_front -= 1
